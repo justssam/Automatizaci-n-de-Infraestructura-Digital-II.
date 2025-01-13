@@ -40,12 +40,8 @@ def calcular_cuadrado_cubo():
     messagebox.showinfo("Resultado", f"Cuadrado: {cuadrado}, Cubo: {cubo}")
 
 def calcular_promedio():
-    numeros = []
-    while True:
-        num = float(entry_promedio.get())
-        if num == -1:
-            break
-        numeros.append(num)
+    numeros = entry_promedio.get().split()
+    numeros = [float(num) for num in numeros if num != '-1']
     promedio = sum(numeros) / len(numeros) if numeros else 0
     messagebox.showinfo("Resultado", f"El promedio es: {promedio}")
 
