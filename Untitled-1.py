@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import messagebox
 import math
 
+####################################  L O G I C A  ############################################################
+
 def suma_numeros():
     numeros = entry_suma.get().split()
     suma = sum(map(int, numeros))
@@ -54,7 +56,7 @@ def max_min_numeros():
     total = len(numeros)
     messagebox.showinfo("Resultado", f"Máximo: {maximo}, Mínimo: {minimo}, Total: {total}")
 
-# --- Configuración de la ventana principal ---
+####################################  D I S E Ñ O  ############################################################
 
 ventana = tk.Tk()
 ventana.title("CalculaThor")
